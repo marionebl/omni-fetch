@@ -5,13 +5,15 @@
   "main": "index.js",
   "browser": "browser.js",
   "scripts": {
+    "prepublish": "typings install",
     "build": "babel source --out-dir distribution",
-    "copy": "ncp readme.md distribution/readme.md && ncp package.json distribution/package.json",
+    "copy": "mkdir -p distribution/ && cp -r typings distribution/ && cp *.md distribution/ && cp *d.ts distribution",
     "prebuild": "rimraf distribution",
     "postbuild": "npm run copy",
     "start": "npm run watch",
     "watch": "npm run build -- --watch",
     "commit": "git-cz",
+    "typings": "typings",
     "commitmsg": "conventional-changelog-lint -e",
     "changelog": "conventional-changelog --preset angular --infile changelog.md --same-file --output-unreleased",
     "push": "git push && git push --tags && hub release create \"v$(cat .git/RELEASE_VERSION.tmp)\" --message=\"v$(cat .git/RELEASE_VERSION.tmp)\n$(cat .git/COMMITMSG.tmp)\" && cd distribution && npm publish && cd ../ && rm .git/RELEASE_VERSION.tmp && rm .git/COMMITMSG.tmp",
@@ -63,7 +65,8 @@
     "parallelshell": "^2.0.0",
     "remark": "^4.1.2",
     "remark-lint": "^3.0.0",
-    "rimraf": "^2.5.2"
+    "rimraf": "^2.5.2",
+    "typings": "^0.7.9"
   },
   "dependencies": {
     "caw": "^1.2.0"
