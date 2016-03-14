@@ -1,6 +1,6 @@
 {
   "name": "omni-fetch",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "wrapper for isomorphic fetch with proxy support",
   "main": "index.js",
   "browser": "browser.js",
