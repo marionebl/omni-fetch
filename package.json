@@ -69,6 +69,8 @@
     "typings": "^0.7.9"
   },
   "dependencies": {
+    "@types/isomorphic-fetch": "0.0.31",
+    "@types/node": "^6.0.52",
     "caw": "^1.2.0"
   },
   "peerDependencies": {
