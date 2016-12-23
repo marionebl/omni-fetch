@@ -1,1 +1,3 @@
-export default from 'isomorphic-fetch';
+import fetch from 'isomorphic-fetch';
+
+export default fetch;
