@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "description": "wrapper for isomorphic fetch with proxy support",
   "main": "distribution/index.js",
-  "browser": "browser.js",
+  "browser": "distribution/browser.js",
   "scripts": {
     "prepublish": "typings install",
     "build": "babel source --out-dir distribution",
