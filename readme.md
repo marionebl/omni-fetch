@@ -59,11 +59,9 @@ import fetch from 'omni-fetch';
 process.env.HTTPS_PROXY = 'http://localhost:8080';
 
 // Uses http://localhost:8080
-fetch('https://sinnerschrader.com', {
-  agent: https.globalAgent
-});
+fetch('https://sinnerschrader.com');
 
-// Bypasses the configured proxy
+// Uses no proxy
 fetch('https://sinnerschrader.com', {
   agent: https.globalAgent
 });
