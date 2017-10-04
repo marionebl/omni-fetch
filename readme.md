@@ -31,7 +31,8 @@ for details
 ### Proxy Support
 
 Specify proxy configuration via `HTTP_PROXY`
-and `HTTPS_PROXY` environment variables.
+and `HTTPS_PROXY` environment variables,
+or their all-lowercase twins.
 Assuming a local proxy server available at `http://localhost:8080`:
 
 ```bash
