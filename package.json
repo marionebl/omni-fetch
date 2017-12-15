@@ -1,10 +1,13 @@
 {
   "name": "omni-fetch",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "wrapper for isomorphic fetch with proxy support",
   "main": "./lib/index.js",
   "browser": "./lib/browser.js",
-  "files": ["lib", "index.d.ts"],
+  "files": [
+    "lib",
+    "index.d.ts"
+  ],
   "scripts": {
     "build": "babel src --out-dir lib",
     "start": "npm run watch",
